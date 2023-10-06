@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="container grande">
+    <!-- sidebar partie -->
+    <div class="sid">
+        <div>
+            <img class="logo1" src="enval.png" alt="log">
+        </div>
+        <div class="lien">
+            <ul>
+                <li class="active">
+
+                    <a href="facture.html"><i class="fa-solid fa-chart-simple"></i>
+                        <span>Dashborad</span></a>
+                </li><br>
+                <li>
+                    <a href="facture.html"><i class="fa-solid fa-peace"></i>
+                        <span>Facture</span></a>
+                </li><br>
+                <li>
+                    <a href="commande.html"><i class="fa-solid fa-cart-shopping"></i>
+                        <span>Commande</span></a>
+                </li><br>
+                <li>
+                    <a href="suivi.html"><i class="fa-solid fa-bag-shopping"></i>
+                        <span>Suivi</span></a>
+                </li><br>
+                <li>
+                    <a href="service client.html"><i class="fa-solid fa-comment-dots"></i>
+                        <span>Service Client</span></a>
+                </li>
+            </ul>
+            <ul class="bat">
+                <li>
+                    <a href=""><i class="fa-solid fa-gear"></i>
+                        <span>Paramètres Compte</span></a>
+                </li><br>
+                <li>
+                    <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Déconnextion</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar partie -->
+    <div class=" nav">
+            <i class="menu fa-solid fa-bars"></i>
+            <img class="pote" src="avatar.jpg" alt="">
+
+        <!-- les divs  -->
+        <div class="div0">
+            <!-- progress positive -->
+            <div class="div1">
+                <p class="posi">Analyse Positif</p>
+                <i class="flash fa-solid fa-bolt"></i>
+                <h4 class="flash1">Positive</h4>
+
+                <div class="chart1">
+                    <canvas id="myChart1"></canvas>
+                </div>
+                <p class="pour">80%</p>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    const abd = document.getElementById('myChart1');
+
+                    new Chart(abd, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['JAN',],
+                            datasets: [{
+                                data: [18, 3,],
+                                barPercentage: 0.5,
+                                backgroundColor: ['rgb(255, 255, 255)', 'rgb(53,151,170)'],
+                                hoverBackgroundColor: 'rgb(74,149,166)',
+
+
+                            }]
+                        },
+                        options: {
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                }
+                            },
+                            circumference: 290,
+                            rotation: 217,
+                            cutout: '80%',
+                            radius: '130'
+                        }
+                    });
+                </script>
+            </div>
+            <!-- progress negative -->
+            <div class="div2">
+                <p class="nega"> Analise Negative</p>
+                <i class="goute fa-solid fa-droplet"></i>
+                <h4 class="goute1">Negative</h4>
+
+                <div class="chart2">
+                    <canvas id="myChart2"></canvas>
+                </div>
+                <p class="pur1">50%</p>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    const abc = document.getElementById('myChart2');
+
+                    new Chart(abc, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['JAN',],
+                            datasets: [{
+                                data: [8, 8,],
+                                barPercentage: 0.5,
+                                backgroundColor: ['rgb(53,151,170)', 'rgb(163,166,168)'],
+                                hoverBackgroundColor: 'rgb(74,149,166)',
+
+
+                            }]
+                        },
+                        options: {
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                }
+                            },
+                            circumference: 290,
+                            rotation: 217,
+                            cutout: '80%',
+                            radius: '130'
+                        }
+                    });
+                </script>
+            </div>
+
+
+        </div>
+        <!-- chart bar -->
+        <div class="">
+            <h3 class="anl">Analyses par mois </h3>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script>
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['JAN', 'FEV', 'MARS', 'AVRIL', 'MAI', 'JUN', 'JUL', 'AOUT', 'SEPT', 'OCT', 'NOV', 'DEC'],
+                        datasets: [{
+                            data: [18, 10, 20, 8, 17, 5, 8, 14, 14, 13, 12, 16],
+                            barPercentage: 0.5,
+                            backgroundColor: 'rgb(255, 255, 255)',
+                            hoverBackgroundColor: 'rgb(74,149,166)',
+
+
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false,
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                display: false,
+                            },
+                            x: {
+                                border: {
+                                    display: false,
+                                },
+                                grid: {
+                                    color: 'white'
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

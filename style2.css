@@ -1,0 +1,288 @@
+.sid{
+    background-color: #fff;
+    width: 200px;
+    height: 100%;
+}
+.logo1{
+    width: 200px;
+}
+ul li a{
+    text-decoration: none;
+    color:gray;
+}
+/* ul li a:hover{
+    background: rgb(150, 228, 228);
+    border-radius: 5px;
+    padding: 5px;
+} */
+li{
+   list-style: none;
+}
+.bat{
+    margin-top: 300%;
+
+}
+#nav{
+    background-color: #fff;
+    width: 930px;
+    height: 80px;
+    margin-left: 10px;
+    width: 100%;
+}
+.pote{
+    width: 50px;
+    border-radius: 100px;
+    margin-top: 10px;
+   margin-left: -30px;
+    
+}
+body{
+    display: flex;
+    background: #E7F9FD;;
+  margin: 0%;
+  height: 100vh;
+}
+#cloche{
+    font-size: 30px;
+
+}
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+/* css du tableau */
+body{
+    height: 100vh;
+    margin: 0%;
+}
+.tableau-style{
+   border: none;
+    width:90%;
+    margin-left: 80px;
+
+
+}
+tr,td {
+    border: 1px solid gray;
+    border-left: none;
+    font-size: x-large;
+    color: gray;
+   
+   
+}
+
+ td,th {
+   padding: 1%; 
+}
+button{
+    color: white;
+    background-color:rgb(14, 101, 101);
+    border: none;
+    border-radius: 3px;
+    width: 35%;
+    padding: 6px;
+
+    
+}
+
+.voir{
+    text-align: center;
+    border-right: none;
+
+}
+#search:focus{
+    border-radius: 8px;
+    border: none;
+    padding: 6px;
+    border:1px solid gray;
+    outline-color: greenyellow;
+
+
+}
+.td{
+    border-right: none;
+    padding: 0%;
+    margin: 0%;
+    
+}
+.voir1{
+    border-bottom: none;
+    border-right: none;
+    text-align: center;
+}
+.tableau{
+background-color: white;
+margin-top: 12px;
+width: 99%;
+margin-left: 12px;
+padding-bottom: 70px;
+padding-top: 30px;
+border-radius: 12px;
+}
+.droite{
+    width: 100%;
+}
+
+tr:hover{
+    background-color: rgba(135, 135, 135, 0.455);
+}
+th:hover{
+    background-color: rgba(135, 135, 135, 0.455); 
+}
+input:hover{
+    border-color: greenyellow solid;
+}
+button:hover{
+    background-color: white;
+    color: rgb(14, 101, 101);
+    border: 1px solid rgb(14, 101, 101);
+
+}
+.red{
+    color: red;
+}
+.C{
+    text-align: left;
+}
+.B{
+    text-align: center;
+}
+/* css du suivi1 */
+.A{
+    width:100%; 
+    font-size:17px;
+}
+.D{
+    background-color: white;
+    width: 97%;
+    margin-left: 12px;
+    padding:12px ;
+    border-radius: 12px;
+}
+#h{
+    text-align: center;
+}
+#f{
+    background-color:#cbf6ff;
+ 
+}
+#g{
+    text-align: center;
+    color: black;
+}
+#i{
+    text-align: center;
+    background-color: red;
+}
+#j{
+    text-align: center;
+    background-color: darkorange;
+}
+.m{
+    background-color: darkgray;;
+}
+.AA{
+    display: flex;
+}
+.BB{
+    background-image: linear-gradient(to right, #33b628, #6bb303, #91af00, #afa900, #caa300, #d69900, #e18e00, #ec8200, #ec7100, #ec5e00, #ec4700, #eb2806);
+    ; width:40%;
+    height:150Px; 
+    margin-left:12px"
+}
+.HH{
+    font-size: 35px;
+    margin-left:300px; 
+    margin-top: 50px;
+}
+.DD{
+    margin-left: 25px;
+}
+p{
+    font-size: 13px;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid black;  
+}
+#im{
+    width:18%;
+}
+#tr{
+    background-color:#cbf6ff;
+}
+#im{
+    width:18%;
+}
+.l{
+    width:100%; 
+    font-size:17px;
+}                                                                                                                                                                                                                    
+.h3{
+    width:100%;
+    font-size:17px;
+    text-align: center;
+}
+.f{
+   font-size: 60%;
+   color: black;
+
+}
+#v{
+    text-align: center;
+}
+.f1{
+    font-size: 60%;
+    color: black;
+    border-right: none;
+   
+    
+}
+.f2{
+    font-size: 60%;
+    color: black;
+    border-right: none;
+    border-bottom: none;
+    border-color: #33b628;
+}
+.f3{
+    font-size: 60%;
+    color: black;
+    border-right: none;
+}
+.f4{
+    font-size: 60%;
+    color: black;
+    border-right: none;
+}
+.f5{
+    font-size: 60%;
+    color: black;
+    border-right: none;
+}
+.sid1{
+    background-color: #fff;
+    width: 200px;
+    height: 345%;
+}
+.bat1{
+    margin-top: 1200%;
+
+}
+
+#G{
+    font-size: 60%;
+    text-align: center;
+    color: black;
+}
+.voir1{
+    color: black;
+    font-size: 60%;
+}
+.voir2{
+    color: black;
+    font-size: 60%;
+    border-right: none;
+    
+}
