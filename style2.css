@@ -60,8 +60,6 @@ body{
    border: none;
     width:90%;
     margin-left: 80px;
-
-
 }
 tr,td {
     border: 1px solid gray;
@@ -72,7 +70,7 @@ tr,td {
    
 }
 
- td,th {
+td,th {
    padding: 1%; 
 }
 button{
@@ -82,23 +80,25 @@ button{
     border-radius: 3px;
     width: 35%;
     padding: 6px;
-
-    
+    cursor: pointer;
 }
 
 .voir{
     text-align: center;
     border-right: none;
-
+    background-color: rgb(14, 101, 101);
+    color: white;
+    cursor: pointer;
+}
+#search{
+    background-color: rgb(208, 208, 208);
+    border: none;
+    border-radius: 8px;
+    width: 250px;
+    height: 30px;
 }
 #search:focus{
-    border-radius: 8px;
-    border: none;
-    padding: 6px;
-    border:1px solid gray;
     outline-color: greenyellow;
-
-
 }
 .td{
     border-right: none;
@@ -112,24 +112,26 @@ button{
     text-align: center;
 }
 .tableau{
-background-color: white;
-margin-top: 12px;
-width: 99%;
-margin-left: 12px;
-padding-bottom: 70px;
-padding-top: 30px;
-border-radius: 12px;
+    background-color: white;
+    margin-top: 12px;
+    width: 99%;
+    margin-left: 12px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+    border-radius: 12px;
 }
 .droite{
     width: 100%;
 }
-
-tr:hover{
+.tableBas:hover{
     background-color: rgba(135, 135, 135, 0.455);
 }
-th:hover{
+/* td:hover{
+    background-color: rgba(135, 135, 135, 0.455);
+} */
+/* th:hover{
     background-color: rgba(135, 135, 135, 0.455); 
-}
+} */
 input:hover{
     border-color: greenyellow solid;
 }

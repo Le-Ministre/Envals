@@ -30,6 +30,24 @@
     color: #79b51b;
 }
 
+.connexion{
+    position: relative;
+    left: 510px;
+    text-align: center;
+    border: 1px solid #3697ab;
+    width: 400px;
+    display: none;
+}
+.combine{
+    color: green;
+}
+.connect{
+    background-color: #3697ab;
+    height: 30px;
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
 .inp{
     display: flex;
     flex-direction: column;
@@ -115,10 +133,11 @@ li{
     display: none;
 }
 .pote{
+    position: relative;
     width: 60px;
     border-radius: 100px;
     margin-top: 10px;
-    margin-left: 90%;
+    left: 98%;
 }
 /* les divs et mi-cercle */
 .div0{
@@ -158,41 +177,6 @@ li{
     margin-top: -30px;
 }
 
-/* :root {
-    --dot-diameter: 150px;
-    --circle-border-width: 3px;
-    --default-color: gainsboro;
-    
-  }
-  
-  .circle-container {
-    width: var(--dot-diameter);
-    height: var(--dot-diameter);
-    transform: rotate(-225deg);
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 75 100;
-    stroke-linecap: round;
-    margin-left: 70px;
-  }
-  
-  .circle-container__background {
-    fill: none;
-    stroke: #3697ab;
-    stroke-width: var(--circle-border-width);
-    stroke-dasharray: 75 100;
-    stroke-linecap: round;
-  }
-  
-  .circle-container__progress {
-    fill: none;
-    stroke-linecap: round;
-    stroke: #ffffff;
-    stroke-dasharray: 75 100;
-    stroke-linecap: round;
-    stroke-width: var(--circle-border-width);
-    transition: stroke-dashoffset 1s ease-in-out;
-  } */
   .pour{
     margin-left: 80px;
     margin-top: -180px;
@@ -201,18 +185,11 @@ li{
     color: #fff;
   }
   
-  /* .stop1 {
-    stop-color: #e66465;
-  }
-  
-  .stop2 {
-    stop-color: #9198e5;
-  } */
+
 
 .div2{
     background-color: #fffefe;
     width: 300px;
-    /* margin-left: 90px; */
     margin-top: 100px;
     border-radius: 10px;
     border: 1px solid;
@@ -226,55 +203,8 @@ li{
 .para1{
     margin-left: 40px;
 }
-/* .para2{
-    margin-left: 80%;
-} */
 
 
-/* :root {
-    --dot-diameter: 150px;
-    --circle-border-width: 3px;
-    --default-color: gainsboro;
-    
-  }
-
-  
-  .circle-container1 {
-    width: var(--dot-diameter);
-    height: var(--dot-diameter);
-    transform: rotate(-225deg);
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 75 100;
-    stroke-linecap: round;
-    margin-left: 70px;
-  }
-  
-  .circle-container__background1 {
-    fill: none;
-    stroke: var(--default-color);
-    stroke-width: var(--circle-border-width);
-    stroke-dasharray: 75 100;
-    stroke-linecap: round;
-  }
-  
-  .circle-container__progress1 {
-    fill: none;
-    stroke-linecap: round;
-    stroke:#2ea0a0;
-    stroke-dasharray: 58 100;
-    stroke-linecap: round;
-    stroke-width: var(--circle-border-width);
-    transition: stroke-dashoffset 1s ease-in-out;
-  } */
-  
-  /* .stop1 {
-    stop-color: #e66465;
-  }
-  
-  .stop2 {
-    stop-color: #9198e5;
-  } */
   .pur1{
     margin-left: 90px;
     margin-top: -170px;
@@ -313,37 +243,67 @@ li{
     margin-top: 60px;
     font-size: 40px;
 }
-
-/* service client page */
 .sui{
+    width: 700px;
+}
+
+.laDiv{
+    display: flex;
     background-color:#ffffff ;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
     padding: 40px;
     border-radius: 10px;
     margin-right: 10px;
 }
+.divAvatar{
+    position: relative;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.avatarJ{
+    margin: auto;
+    border-radius: 50%;
+}
+.potes{
+    width: 300px;
+    
+}
+.btnHaut{
+    position: relative;
+    left: 500px;
+}
+.btnVers{
+    width: 200px;
+}
+.btnVers:hover{
+   background-color: white;
+   border: 1px solid green;
+}
+.btnRed{
+    width: 200px;
+    background-color: red;
+}
+.btnRed2{
+    width: 200px;
+    background-color: red;
+}
+
 input:focus{
     outline-color: #79B51C;
 
 }
 .suijet{
-    width: 95%;
-    height: 30px;
-    margin-top: 5px;
+   width: 500px;
+   height: 30px;
+   margin-top: 5px;
    background-color:#cccccc84;
    border: none;
-   border-radius: 5px;
-   
-   
+   border-radius: 5px;  
 }
 .ttt{
     display: flex;
     flex-direction: column;
-    margin-top: px;
-
-
 }
 .texte{
     background-color:#cccccc84 ;
@@ -363,7 +323,7 @@ input:focus{
 }
 
 .but{
-    width: 95%;
+    width: 100%;
     height: 30px;
     margin-top: 20px;
     background-color:#3697ab;
@@ -424,11 +384,19 @@ input:focus{
     .menu{
         display: none;
     }
+    .containe{
+        justify-content: center;
+    }
+   
 }
 
 
  /* pour tablette */
 @media screen and (max-width:768px){
+    .connexion{
+        position: relative;
+        left: 11rem;
+    }
     .grande{
         font-size: 14px;
     }
@@ -453,8 +421,25 @@ input:focus{
 
 }
 
- /* pour mobile */
+@media only screen and (max-width:425px){
+    .connexion{
+        position: relative;
+        left: 1px;
+    }
+    .nav{
+        width: px;
+    }
+}
+
+
+
+/* pour mobile */
 @media only screen and (max-width:375px) {
+    .connexion{
+        position: relative;
+        left: 10px;
+        width: 300px;
+    }
     .grande{
         font-size: 12px;
     }
