@@ -1,123 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="grande">
+  <body>
     <!-- sidebar partie -->
-    <div class="sid">
+    <div class="grande">
+      <div class="sid">
         <div>
-            <i class="menu fa-solid fa-bars"></i>
-            <img class="logo1" src="enval.png" alt="log">
+          <i class="menu fa-solid fa-bars"></i>
+          <img class="logo1" src="enval.png" alt="log" />
         </div>
         <div class="lien">
-            <ul>
-                <li>
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-chart-simple"></i>
+                <span>Dashborad</span></a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="facture.html"
+                ><i class="fa-solid fa-peace"></i> <span>Facture</span></a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="commande.html"
+                ><i class="fa-solid fa-cart-shopping"></i>
+                <span>Commande</span></a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="suivi.html"
+                ><i class="fa-solid fa-bag-shopping"></i> <span>Suivi</span></a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="service client.html"
+                ><i class="fa-solid fa-comment-dots"></i>
+                <span>Service Client</span></a
+              >
+            </li>
+          </ul>
+          <ul class="bat">
+            <li class="active">
+              <a href="parametre.html"
+                ><i class="fa-solid fa-gear"></i>
+                <span>Paramètres Compte</span></a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Déconnextion</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
 
-                    <a href="dashboard.html"><i class="fa-solid fa-chart-simple"></i>
-                        <span>Dashborad</span></a>
-                </li><br>
-                <li>
-                    <a href="facture.html"><i class="fa-solid fa-peace"></i>
-                        <span>Facture</span></a>
-                </li><br>
-                <li>
-                    <a href="commande.html"><i class="fa-solid fa-cart-shopping"></i>
-                        <span>Commande</span></a>
-                </li><br>
-                <li>
-                    <a href="suivi.html"><i class="fa-solid fa-bag-shopping"></i>
-                        <span>Suivi</span></a>
-                </li><br>
-                <li>
-                    <a href="service client.html"><i class="fa-solid fa-comment-dots"></i>
-                        <span>Service Client</span></a>
-                </li>
-            </ul>
-            <ul class="bat">
-                <li class="active">
-                    <a href="parametre.html"><i class="fa-solid fa-gear"></i>
-                        <span>Paramètres Compte</span></a>
-                </li><br>
-                <li>
-                    <a href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>
-                        <span>Déconnextion</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- navbar partie -->
-    <div class=" nav">
-       
-        <img class="pote" src="avatar.jpg" alt="">
-        <div class="divModifPassword">
-            <h2 class="leMot">Modifier le mot de passe</h2>
-            <div class="">
-                <p class="lesfrases">Ancian mot de passe</p>
-                <input class="" type="password" name="" id="ancianM">
-            </div>
-            <div class="">
-                <p class="lesfrases">Nouveau mot de passe</p>
-                <input class="" type="password" name="" id="nouveauM">
-            </div>
-            <div class="">
-                <p class="lesfrases">Confirmation</p>
-                <input class="" type="password" name="" id="confirmM">
-            </div>
-            <button class="envoiDelit">Envoyer</button>
-        </div>
+      <!-- navbar partie -->
+      <div class="nav">
+        <img class="pote" src="avatar.jpg" alt="" />
+
         <div class="toutHaut">
-            <div class="divDuHaut">
-                <a href="" class="goBack"> <i class="fa-solid fa-arrow-left"></i> Retour au tableau de bord</a>
-                <div class="btnHaut">
-                    <button class="btnVers1">Modifier le mot de passe</button>
-                    <button class="btnRed">Supprimer le compte</button>
-                </div>
+          <div class="divDuHaut">
+            <a href="" class="goBack">
+              <i class="fa-solid fa-arrow-left"></i> Retour au tableau de
+              bord</a
+            >
+            <div class="btnHaut">
+              <button class="btnVers1">Modifier le mot de passe</button>
+              <button class="btnRed">Supprimer le compte</button>
             </div>
-           
-            <div class="laDiv">
-                <div class="sui">
+          </div>
 
-                    <div class="ttt">
-                        <p>Nom</p>
-                        <input class="suijet1" type="text" name="" id="">
-                    </div>
-                    <div class="ttt">
-                        <p>Email</p>
-                        <input class="suijet" type="email" name="" id="">
-                    </div>
+          <div class="laDiv">
+            <div class="sui">
+              <div class="ttt">
+                <p>Nom</p>
+                <input class="suijet1" type="text" name="" id="" />
+              </div>
+              <div class="ttt">
+                <p>Email</p>
+                <input class="suijet" type="email" name="" id="" />
+              </div>
 
-                    <div class="mmm">
-                        <label class="ms" for="">Biographie</label>
-                        <textarea name="" id="letextarea" cols="30" rows="10"></textarea>
-                    </div>
-                    <a href=""><button class="but">Envoyer</button></a>
-                </div>
-                <div class="divAvatar">
-
-                    <div class="avatarJ">
-                        <p>ton avatar</p>
-                        <img class="potes" src="avatar.jpg" alt="">
-                    </div>
-                    <div class="btnBas">
-                        <button class="btnVers">Modifier la photo</button>
-                        <button class="btnRed2">Supprimer la photo</button>
-                    </div>
-                </div>
+              <div class="mmm">
+                <label class="ms" for="">Biographie</label>
+                <textarea
+                  name=""
+                  id="letextarea"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <a href=""><button class="but">Envoyer</button></a>
             </div>
+
+            <div class="divAvatar">
+              <div class="avatarJ">
+                <p>ton avatar</p>
+                <img class="potes" src="avatar.jpg" alt="" />
+              </div>
+              <div class="btnBas">
+                <button class="btnVers">Modifier la photo</button>
+                <button class="btnRed2">Supprimer la photo</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-        <script src="parametre.js"></script>
-</body>
-
+    <div class="divModifPassword">
+      <h2 class="leMot">Modifier le mot de passe</h2>
+      <div class="">
+        <p class="lesfrases">Ancian mot de passe</p>
+        <input class="" type="password" name="" id="ancianM" />
+      </div>
+      <div class="">
+        <p class="lesfrases">Nouveau mot de passe</p>
+        <input class="" type="password" name="" id="nouveauM" />
+      </div>
+      <div class="">
+        <p class="lesfrases">Confirmation</p>
+        <input class="" type="password" name="" id="confirmM" />
+      </div>
+      <button class="envoiDelit">Envoyer</button>
+    </div>
+    <div class="notif">
+      <h3 class="Personnelles">Données Personnelles</h3>
+      <h5 class="effectuée">La mise à jour a été effectuée avec success</h5>
+    </div>
+    <script src="parametre.js"></script>
+  </body>
 </html>

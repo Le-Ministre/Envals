@@ -2,6 +2,7 @@
     background-color: #c0e2ea;
     display: flex;
     margin: 0%;
+    width: 100%;
 }
 /* connextion page */
 .containe{
@@ -245,12 +246,15 @@ li{
 }
 /* le parametre de compte */
 .divModifPassword{
-    position: relative;
     width: 300px;
-    height: 300px;
+    height: 330px;
     border: 1px solid;
     background-color:#ffffff ;
     border-radius: 10px;
+    position: relative;
+    left: 30%;
+    bottom: 850px;
+    display: none;
 }
 .leMot{
     background-color: #3697ab;
@@ -275,17 +279,25 @@ li{
    border: none;
 }
 .envoiDelit{
-    width: 260px;
+    width: 270px;
+    height: 30px;
+    background-color: #3697ab;
+    border: none;
+    border-radius: 5px;
+    color: white;
     margin-left: 15px;
     margin-top: 20px;
     border-radius: 5px;
 }
+   
+
 .toutHaut{
     background-color:#ffffff ;
     margin-top: 20px;
+    bottom: 00px;
 }
 .sui{
-    width: 700px;
+    width: calc(100% / 2);
 }
 .divDuHaut{
     display: flex;
@@ -297,6 +309,29 @@ li{
     padding: 40px;
     border-radius: 10px;
     margin-right: 10px;
+}
+.notif{
+    border: 1px solid;
+    width: 300px;
+    height: 90px;
+    border: 1px solid #3697ab;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    left: 60%;
+    bottom: 1095px;
+    display: none;
+}
+.Personnelles{
+    background-color: #3697ab;
+    height: 35px;
+    margin: 0;
+    color: white;
+    font-size: 25px;
+}
+.effectuée{
+    color: #79b51b;
+    font-size: 16px;
 }
 .divAvatar{
     position: relative;
@@ -318,20 +353,36 @@ li{
 }
 .btnVers {
     width: 200px;
+    height: 30px;
+    background-color: #3697ab;
+    border: none;
+    border-radius: 5px;
+    color: white;
 }
 .btnVers1{
     width: 200px;
+    height: 30px;
+    background-color: #3697ab;
+    border: none;
+    border-radius: 5px;
+    color: white;
 }
 .btnVers:hover{
    background-color: white;
-   border: 1px solid green;
+   border: 1px solid #3697ab;
+   color: #3697ab;
 }
 .btnVers1:hover{
     background-color: white;
-    border: 1px solid green;
+    border: 1px solid #3697ab;
+    color: #3697ab;
 }
 .btnRed{
     width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
     background-color: red;
 }
 .btnRed:hover{
@@ -341,6 +392,10 @@ li{
 }
 .btnRed2{
     width: 200px;
+    height: 30px;;
+    border: none;
+    border-radius: 5px;
+    color: white;
     background-color: red;
 }
 .btnRed2:hover{
