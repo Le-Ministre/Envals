@@ -66,8 +66,6 @@ tr,td {
     border-left: none;
     font-size: x-large;
     color: gray;
-   
-   
 }
 
 td,th {
@@ -139,7 +137,6 @@ button:hover{
     background-color: white;
     color: rgb(14, 101, 101);
     border: 1px solid rgb(14, 101, 101);
-
 }
 .red{
     color: red;
@@ -287,4 +284,7 @@ table{
     font-size: 60%;
     border-right: none;
     
+}
+.aucun{
+    text-align: center;
 }

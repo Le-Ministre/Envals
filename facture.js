@@ -77,3 +77,71 @@ const compare = (ids, asc) => (row1, row2) => {
    classe.forEach(tr => tbody.appendChild(tr));
  }));
 
+
+ const inputRecherche = document.querySelector('#search');
+
+ const recherche = (nom) =>{
+   voirTable.innerHTML=''
+   factures.forEach((element) =>{
+      if (element.laboratoire.toLowerCase().includes(nom)) {
+         voirTable.innerHTML+=`
+         <tr class="tableBas">
+         <td >${element.facture}</td>
+         <td>${element.laboratoire}</td>
+         <td>${element.date}</td>
+         <td class="td"   style="width:20%;text-align: center;"><button >Voir</button></td>
+        </tr>
+      `
+      } if (voirTable.innerHTML==='') {
+         voirTable.innerHTML+=`
+         <tr class="tableBas">
+         <td class="aucun" colspan="5">Aucun Resulta trouvé </td>
+      
+        </tr>
+      `
+      }
+     
+   })
+ }
+ 
+ inputRecherche.addEventListener('input', ()=>{
+   let toRecherche = inputRecherche.value.toLowerCase()
+   recherche(toRecherche);
+ });
+
+ /* input de recherche  code */
+ // Variables
+
+/* let inputRecherche = document.querySelector('.inputRecherche');
+let tableau = document.querySelector('.tableau');
+let trs = tableau.querySelectorAll('tr');
+
+// Événement de saisie de l'input de recherche
+
+inputRecherche.addEventListener('input', (e) => {
+  // On récupère la valeur saisie dans l'input
+
+  let valeurRecherche = e.target.value;
+
+  // On parcourt le tableau
+
+  factures.forEach((tr) => {
+    // On récupère le nom de l'utilisateur dans la ligne courante
+
+    let nom = tr.querySelector('td:first-child').textContent;
+
+    // On compare le nom saisi avec le nom de l'utilisateur
+
+    if (nom.toLowerCase().includes(valeurRecherche.toLowerCase())) {
+      // On affiche la ligne courante
+
+      tr.style.display = 'table-row';
+    } else {
+      // On cache la ligne courante
+
+      tr.style.display = 'none';
+    }
+  });
+});
+ */
+

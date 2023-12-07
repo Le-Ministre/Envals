@@ -89,4 +89,38 @@ const compare = (ids, asc) => (row1, row2) => {
     this.asc = !this.asc
     classe.forEach(tr => tbody.appendChild(tr));
   }));
+
+
+
+
+
+  const inputRecherche = document.querySelector('#search');
+
+  const recherche = (nom) =>{
+    suitable.innerHTML=''
+    suivis.forEach((element) =>{
+       if (element.Lot.toLowerCase().includes(nom)) {
+        suitable.innerHTML+=` <tr class="tableBas">
+        <td>${element.Lot}</td>
+        <td>${element.Etat}</td>
+        <td >${element.datePrevue}</td>
+        <td>${element.Rapport}</td>
+        <td class="td"><a href="suividetail.html"><button>Voir</button></a></td>
+        </tr>
+        `
+       } if (suitable.innerHTML==='') {
+        suitable.innerHTML+=`
+          <tr class="tableBas">
+          <td class="aucun" colspan="5">Aucun Resulta trouvé </td>
+         </tr>
+       `
+       }
+      
+    })
+  }
+  
+  inputRecherche.addEventListener('input', ()=>{
+    let toRecherche = inputRecherche.value.toLowerCase()
+    recherche(toRecherche);
+  });
  
