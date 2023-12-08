@@ -136,9 +136,10 @@ li{
 .pote{
     position: relative;
     width: 60px;
-    border-radius: 100px;
+    height: 60px;
+    border-radius: 50%;
     margin-top: 10px;
-    left: 98%;
+    left: 95%;
 }
 /* les divs et mi-cercle */
 .div0{
@@ -245,10 +246,20 @@ li{
     font-size: 40px;
 }
 /* le parametre de compte */
+.goBack{
+    color: #79b51b;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.goBack:hover{
+    font-size: 18px;
+    transition: all 1s ;
+}
+
 .divModifPassword{
     width: 300px;
     height: 330px;
-    border: 1px solid;
+    border: 1px solid #3697ab;
     background-color:#ffffff ;
     border-radius: 10px;
     position: relative;
@@ -294,19 +305,20 @@ li{
 .toutHaut{
     background-color:#ffffff ;
     margin-top: 20px;
-    bottom: 00px;
+    border-radius: 10px;
 }
 .sui{
-    width: calc(100% / 2);
+    width: 60%;
+    height: 500px;
 }
 .divDuHaut{
     display: flex;
 }
 .laDiv{
+    width: 100%;
+    height: 600px;
     display: flex;
-   
-    margin-top: 20px;
-    padding: 40px;
+    margin-left: 10px;
     border-radius: 10px;
     margin-right: 10px;
 }
@@ -334,8 +346,9 @@ li{
     font-size: 16px;
 }
 .divAvatar{
+    width: 40%;
+    height: 440px;
     position: relative;
-    left: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -345,6 +358,8 @@ li{
 }
 .potes{
     width: 300px;
+    height: 300px;
+    border-radius: 50%;
     
 }
 .btnHaut{
