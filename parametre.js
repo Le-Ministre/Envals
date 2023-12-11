@@ -10,14 +10,16 @@ const grandPotes = document.querySelector('.potes');
 const btnVers = document.querySelector('.btnVers');
 const btnRed2 = document.querySelector('.btnRed2');
 const tekFile = document.querySelector('.tekFile');
-const ancianM = document.querySelector('.ancianM');
-const nouveauM = document.querySelector('.nouveauM');
-const confirmM = document.querySelector('.confirmM');
+const divModifPassword = document.querySelector('.divModifPassword');
+const ancienM = document.querySelector('#ancienM');
+const nouveauM = document.querySelector('#nouveauM');
+const confirmM = document.querySelector('#confirmM');
 const envoiDelit = document.querySelector('.envoiDelit');
 const notif = document.querySelector('.notif');
 const Personnelles = document.querySelector('.Personnelles');
 const effectuée = document.querySelector('.effectuée');
 
+console.log(ancienM);
 
 const storedImageUrl =JSON.parse(localStorage.getItem('profilImage')) ;
 if (storedImageUrl) {
@@ -26,10 +28,16 @@ if (storedImageUrl) {
 }
 
 btnVers.addEventListener('click', ()=>{
-    tekFile.click()
+    tekFile.click(); 
     notif.style.display = 'block'
     Personnelles.textContent = 'Modification avatar';
     effectuée.textContent = 'Votre photo a été ajoutée avec success';
+
+    setTimeout(() => {
+        // Cache le message d'erreur
+        notif.style.display = "none";
+      }, 2000);
+    
 });
 tekFile.addEventListener('change',()=>{
     const file = tekFile.files[0];
@@ -49,22 +57,37 @@ btnRed2.addEventListener('click', ()=>{
     notif.style.display = 'block'
     Personnelles.textContent = 'Suppression avatar';
     effectuée.textContent = 'Votre photo a été supprimée avec success';
+
+    setTimeout(() => {
+        // Cache le message d'erreur
+        notif.style.display = "none";
+      }, 2000);
 });
 
 
 let leNom = 'essai Moi';
 let leMail = 'essaimoi@gmail.com';
+let letextare = 'teste me';
 
 but.addEventListener('click', (e)=>{
     e.preventDefault();
+    console.log(but);
     if (suijet1.value === leNom && suijet.value === leMail) {
-        notif.style.display = 'block'
-        Personnelles.textContent = 'Données personnelles';
-        effectuée.textContent = 'La mise à jour a été effectuée avec success';
+      notif.style.display = 'block'
+      Personnelles.textContent = 'Données personnelles';
+      effectuée.textContent = 'La mise à jour a été effectuée avec success';
+     
+        setTimeout(() => {
+            // Cache le message d'erreur
+            notif.style.display = "none";
+          }, 2000);
     }
+});
+
+btnVers1.addEventListener('click', (e)=>{
+    e.preventDefault();
+    divModifPassword.style.display = 'block';
 })
-
-
 
 
 
@@ -72,20 +95,48 @@ let ancientMot = '12345678';
 let newMot = 'adamoune';
 let confir = 'adamoune';
 
-envoiDelit.addEventListener('click', (e)=>{
-    e.preventDefault();
-    if (ancianM.value === ancientMot && nouveauM.value === newMot && confirmM.value === confir) {
-        notif.style.display = 'block'
-        Personnelles.textContent = 'Modification du mot de passe';
-        effectuée.textContent = 'Mot de passe modifié avec success';
-        
-    } else{
-        notif.style.display = 'block'
-        Personnelles.textContent = 'Echec de confirmation';
-        effectuée.textContent = 'le new et la confir mot de passe doivent etre identique';
-    }
+envoiDelit.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  // Vérifiez si le mot de passe ancien est correct
+  const ancienMotCorrect = ancienM.value === ancientMot;
+
+  // Vérifiez si le nouveau mot de passe est correct
+  const nouveauMotCorrect = nouveauM.value === newMot;
+
+  // Vérifiez si la confirmation du mot de passe est correcte
+  const confirmationMotCorrect = confirmM.value === confir;
+
+  // Si tous les mots de passe sont corrects, modifiez le mot de passe
+  if (ancienMotCorrect && nouveauMotCorrect && confirmationMotCorrect) {
+    notif.style.display = 'block';
+    Personnelles.textContent = 'Modification du mot de passe';
+    effectuée.textContent = 'Mot de passe modifié avec succès';
+   
+
+    setTimeout(() => {
+      divModifPassword.style.display = 'none';
+      // Cache le message d'erreur
+      notif.style.display = "none";
+    }, 2000);
+    
+   
+  } else {
+    notif.style.display = 'block';
+    Personnelles.textContent = 'Échec de confirmation';
+    effectuée.textContent = 'Le nouveau et la confirmation du mot de passe doivent être identiques';
+
+   
+  }
+  setTimeout(() => {
+    // Cache le message d'erreur
+    notif.style.display = "none";
+  }, 2000);
 });
+
+  
+
 btnRed.addEventListener('click', (e)=>{
     e.preventDefault();
-    alert('Voulez vous supprimez votre compte???');
+    confirm('Voulez vous supprimez votre compte???');
 });

@@ -81,7 +81,7 @@ const compare = (ids, asc) => (row1, row2) => {
  const inputRecherche = document.querySelector('#search');
 
  const recherche = (nom) =>{
-   voirTable.innerHTML=''
+   voirTable.innerHTML='';
    factures.forEach((element) =>{
       if (element.laboratoire.toLowerCase().includes(nom)) {
          voirTable.innerHTML+=`

@@ -272,14 +272,13 @@ li{
     color: white;
     margin: 0;
     text-align: center;
-    border-bottom:1px solid black;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 .lesfrases{
     margin-left: 15px;
 }
-#ancianM,
+#ancienM,
 #nouveauM,
 #confirmM{
     width: 260px;
@@ -343,7 +342,6 @@ li{
 }
 .effectuée{
     color: #79b51b;
-    font-size: 16px;
 }
 .divAvatar{
     width: 40%;
