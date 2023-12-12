@@ -4,7 +4,7 @@ const btnVers1 = document.querySelector('.btnVers1');
 const btnRed = document.querySelector('.btnRed');
 const suijet1 = document.querySelector('.suijet1');
 const suijet = document.querySelector('.suijet');
-const letextarea = document.querySelector('#letextarea');
+const letextarea = document.querySelector('.putain');
 const but = document.querySelector('.but');
 const grandPotes = document.querySelector('.potes');
 const btnVers = document.querySelector('.btnVers');
@@ -19,26 +19,22 @@ const notif = document.querySelector('.notif');
 const Personnelles = document.querySelector('.Personnelles');
 const effectuée = document.querySelector('.effectuée');
 
-console.log(ancienM);
 
-const storedImageUrl =JSON.parse(localStorage.getItem('profilImage')) ;
-if (storedImageUrl) {
+const storedImageUrl = JSON.parse(localStorage.getItem('profilImage')) ;
+const addPhoto = ()=>{
+  if (storedImageUrl) {
     grandPotes.src = storedImageUrl;
     petitePote.src = storedImageUrl;
+    
 }
 
-btnVers.addEventListener('click', ()=>{
-    tekFile.click(); 
-    notif.style.display = 'block'
-    Personnelles.textContent = 'Modification avatar';
-    effectuée.textContent = 'Votre photo a été ajoutée avec success';
+} 
+addPhoto()
 
-    setTimeout(() => {
-        // Cache le message d'erreur
-        notif.style.display = "none";
-      }, 2000);
-    
+btnVers.addEventListener('click', ()=>{
+    tekFile.click();  
 });
+
 tekFile.addEventListener('change',()=>{
     const file = tekFile.files[0];
     grandPotes.src = URL.createObjectURL(file);
@@ -48,6 +44,16 @@ tekFile.addEventListener('change',()=>{
         localStorage.setItem('profilImage',JSON.stringify(reader.result))
     })
     reader.readAsDataURL(file)
+    notif.style.display = 'block'
+    Personnelles.textContent = 'Modification avatar';
+    effectuée.textContent = 'Votre photo a été ajoutée avec success';
+
+    setTimeout(() => {
+        // Cache le message d'erreur
+        notif.style.display = "none";
+      }, 2000);
+
+    
 });
 btnRed2.addEventListener('click', ()=>{
     grandPotes.src = 'avatar.jpg';
@@ -65,24 +71,38 @@ btnRed2.addEventListener('click', ()=>{
 });
 
 
-let leNom = 'essai Moi';
-let leMail = 'essaimoi@gmail.com';
-let letextare = 'teste me';
+  let leSalot =  letextarea.value
+const envoyer = () =>{
+  if (suijet1.value ===''|| suijet.value ==='' || leSalot) {
 
-but.addEventListener('click', (e)=>{
-    e.preventDefault();
-    console.log(but);
-    if (suijet1.value === leNom && suijet.value === leMail) {
-      notif.style.display = 'block'
-      Personnelles.textContent = 'Données personnelles';
-      effectuée.textContent = 'La mise à jour a été effectuée avec success';
-     
-        setTimeout(() => {
-            // Cache le message d'erreur
-            notif.style.display = "none";
-          }, 2000);
-    }
-});
+  
+  } else{
+   localStorage.setItem('leNom', JSON.stringify(suijet1.value))
+localStorage.setItem('leMail', JSON.stringify(suijet.value))
+localStorage.setItem('letextare', JSON.stringify(letextarea.value))
+
+notif.style.display = 'block'
+Personnelles.textContent = 'Donnée Personnelles';
+effectuée.textContent = 'you are nice';
+
+setTimeout(() => {
+    // Cache le message d'erreur
+    notif.style.display = "none";
+  }, 2000);
+  }
+}
+
+
+const reccuoLocal = ()=>{
+  let getNon = JSON.parse(localStorage.getItem('leNom'));
+  let getMail = JSON.parse(localStorage.getItem('leMail'));
+  let getText = JSON.parse(localStorage.getItem('letextare'));
+  suijet1.value = getNon;
+  suijet.value = getMail;
+  letextarea.value = getText;
+}
+reccuoLocal()
+
 
 btnVers1.addEventListener('click', (e)=>{
     e.preventDefault();

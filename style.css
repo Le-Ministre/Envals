@@ -328,11 +328,12 @@ li{
     border: 1px solid #3697ab;
     text-align: center;
     background-color: white;
-    position: relative;
+    position: absolute;
     left: 60%;
-    bottom: 1095px;
-    display: none;
+   top: 90px;
+   display: none;
 }
+
 .Personnelles{
     background-color: #3697ab;
     height: 35px;
@@ -348,6 +349,7 @@ li{
     height: 440px;
     position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 .avatarJ{
@@ -421,7 +423,7 @@ input:focus{
 
 }
 .suijet{
-   width: 700px;
+   width: 100%;
    height: 30px;
    margin-top: 5px;
    background-color:#cccccc84;
@@ -429,7 +431,7 @@ input:focus{
    border-radius: 5px;  
 }
 .suijet1{
-   width: 700px;
+   width: 100%;
    height: 30px;
    margin-top: 5px;
    background-color:#cccccc84;
